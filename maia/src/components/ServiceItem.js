@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ServiceItem() {
+function ServiceItem({service}) {
 
 
     return (
         <div>
-            <text></text>
+            <text>{service.name}</text>
         </div>
     )
 }

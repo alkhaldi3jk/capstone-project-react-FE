@@ -23,7 +23,7 @@ class AuthStore {
 
   signup = async (userData) => {
     try {
-      const res = await api.post("/signup/dashboard", userData);
+      const res = await api.post("/signup", userData);
       this.setUser(res.data.token);
     } catch (error) {
       console.log(error);

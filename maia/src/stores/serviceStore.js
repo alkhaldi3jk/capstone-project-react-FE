@@ -2,7 +2,11 @@ import { makeAutoObservable } from "mobx";
 import api from "./api";
 
 class ServiceStore {
-  services = [];
+  services = [
+    //   {
+    //       name: "abdallah",
+    //   }
+  ];
 
   constructor() {
     makeAutoObservable(this);
@@ -10,10 +14,10 @@ class ServiceStore {
 
   fetchSrvices = async () => {
     try {
-      const res = await api.get("/");
+      const res = await api.get("/dashboard");
       this.services = res.data;
     } catch (error) {
-        console.log(error)
+      console.log(error);
     }
   };
 
@@ -23,7 +27,7 @@ class ServiceStore {
       for (const key in newService) {
         formData.append(key, newService[key]);
       }
-      const res = await api.post("/", formData);
+      const res = await api.post("/dashboard", formData);
       this.services.push(res.data);
     } catch (error) {
       console.log(error);
@@ -31,6 +35,6 @@ class ServiceStore {
   };
 }
 
-const serviceStore = new ServiceStore()
-serviceStore.fetchSrvices()
-export default serviceStore
+const serviceStore = new ServiceStore();
+serviceStore.fetchSrvices();
+export default serviceStore;

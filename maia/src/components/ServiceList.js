@@ -7,11 +7,11 @@ function ServiceList() {
   const serviceList = serviceStore.services.map((service) => (
     <ServiceItem service={service} key={service._id} />
   ));
-  return <div>
-
-      <h1>{services.name}</h1>
+  return (
+    <div>
       <h1>{serviceList}</h1>
-  </div>;
+    </div>
+  );
 }
 
 export default observer(ServiceList);
