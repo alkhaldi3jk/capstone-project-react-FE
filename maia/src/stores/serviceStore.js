@@ -2,11 +2,8 @@ import { makeAutoObservable } from "mobx";
 import api from "./api";
 
 class ServiceStore {
-  services = [
-    //   {
-    //       name: "abdallah",
-    //   }
-  ];
+  services = [];
+  isLoading = true;
 
   constructor() {
     makeAutoObservable(this);
@@ -14,8 +11,10 @@ class ServiceStore {
 
   fetchSrvices = async () => {
     try {
-      const res = await api.get("/dashboard");
+      const res = await api.get("/");
       this.services = res.data;
+      this.isLoading = false;
+
     } catch (error) {
       console.log(error);
     }
