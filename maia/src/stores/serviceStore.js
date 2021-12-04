@@ -14,7 +14,6 @@ class ServiceStore {
       const res = await api.get("/");
       this.services = res.data;
       this.isLoading = false;
-
     } catch (error) {
       console.log(error);
     }
@@ -23,9 +22,7 @@ class ServiceStore {
   createService = async (newService) => {
     try {
       const formData = new FormData();
-      for (const key in newService) {
-        formData.append(key, newService[key]);
-      }
+      for (const key in newService) formData.append(key, newService[key]);
       const res = await api.post("/dashboard", formData);
       this.services.push(res.data);
     } catch (error) {

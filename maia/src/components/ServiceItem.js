@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react'
 import React from 'react'
 import serviceStore from '../stores/serviceStore'
-import CreateService from './CreateService'
+import AddService from './AddService'
 
 
 function ServiceItem({service}) {
@@ -10,7 +10,7 @@ function ServiceItem({service}) {
     return (
         <div>
             <text>{service.name}</text>
-            <CreateService service={service}/>
+            <image src= {service.image}/>
         </div>
     )
 }
