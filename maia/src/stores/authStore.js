@@ -32,7 +32,7 @@ class AuthStore {
 
   signin = async (userData) => {
     try {
-      const res = await api.post("/signin/dashboard");
+      const res = await api.post("/signin", userData);
       this.setUser(res.data.token);
     } catch (error) {
       console.log(error);
