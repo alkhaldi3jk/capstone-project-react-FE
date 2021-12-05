@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ServiceList from './components/ServiceList';
+import ServiceList from './Components/ServiceList';
+
 
 function App() {
   return (
