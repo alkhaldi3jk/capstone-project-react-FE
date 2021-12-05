@@ -17,7 +17,7 @@ class AuthStore {
 
   setUser = (token) => {
     localStorage.setItem("myToken", token);
-    api.defults.headers.common.Authrization = ` Bearer ${token}`;
+    api.defaults.headers.common.Authorization = `Bearer ${token}`;
     this.user = decode(token);
   };
 
@@ -32,7 +32,7 @@ class AuthStore {
 
   signin = async (userData) => {
     try {
-      const res = await api.post("/signin/dashboard");
+      const res = await api.post("/signin", userData);
       this.setUser(res.data.token);
     } catch (error) {
       console.log(error);
