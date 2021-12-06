@@ -1,6 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import ServiceList from './Components/ServiceList';
+
+import ServiceList from './components/service/ServiceList';
+import UserList from './components/users/UserList';
+
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
 
       <h1>HI</h1>
       <ServiceList/>
+      <UserList/>
     </div>
   );
 }

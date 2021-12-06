@@ -1,14 +1,15 @@
 import React from "react";
 import { Button, Modal, Row, Form, Col } from "react-bootstrap";
 import { useState } from "react";
-import authStore from "../stores/authStore";
+import authStore from "../../stores/authStore";
 import { observer } from "mobx-react";
 
-function SigninModal() {
+function SignupModal() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -16,7 +17,7 @@ function SigninModal() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    authStore.signin(user);
+    authStore.signup(user);
     handleClose();
   };
   const handleChange = (event) =>
@@ -25,7 +26,7 @@ function SigninModal() {
   return (
     <>
       <Button variant="outline-secondary" onClick={handleShow}>
-        Signin
+        Signup
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -69,6 +70,7 @@ function SigninModal() {
                 />
               </Col>
             </Form.Group>
+
           </Form>
         </Modal.Body>
         <Modal.Footer>
@@ -76,7 +78,7 @@ function SigninModal() {
             Close
           </Button>
           <Button variant="outline-secondary" onClick={handleSubmit}>
-            Signin
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
@@ -84,4 +86,4 @@ function SigninModal() {
   );
 }
 
-export default observer(SigninModal);
+export default observer(SignupModal);
