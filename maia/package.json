@@ -27,7 +27,7 @@
   
    
    
-    "yarn": "^1.22.17"
+    "yarn": "^1.22.17",
 
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",

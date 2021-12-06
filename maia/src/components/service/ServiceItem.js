@@ -8,7 +8,7 @@ import UpdateServiceModal from "./UpdateServiceModal";
 function ServiceItem({ service }) {
   return (
     <div>
-        <Table striped bordered hover variant="dark">
+      <Table striped bordered hover variant="dark">
   <thead>
     <tr>
       <th>#</th>
@@ -22,14 +22,22 @@ function ServiceItem({ service }) {
       <td>{service._id}</td>
       <td>{service.name}</td>
       <td><UpdateServiceModal/></td>
-      <td>@mdo</td>
+      <td>     <img
+        src={service.image}
+        alt={service.name}
+        style={{ width: "10", height: "10" }}
+      /></td>
     </tr>
 
 
   </tbody>
 </Table>
       {/* <text>{service.name}</text>
-      <image src={service.image} alt=""/> */}
+      <img
+        src={service.image}
+        alt={service.name}
+        style={{ width: "10", height: "10" }}
+      /> */}
     </div>
   );
 }
