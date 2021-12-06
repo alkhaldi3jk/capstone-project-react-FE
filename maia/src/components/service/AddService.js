@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import { Form, Modal, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
-import serviceStore from "../stores/serviceStore";
-import authStore from "../stores/authStore";
+import serviceStore from "../../stores/serviceStore";
+import authStore from "../../stores/authStore";
 function AddService() {
   const [service, setService] = useState({
     name: "",

@@ -29,6 +29,21 @@ class ServiceStore {
       console.log(error);
     }
   };
+
+  updateService=async (updatedService,serviceId)=>{
+    try {
+      const formData = new FormData();
+      for (const key in updatedService) formData.append(key, updatedService[key]);
+      const res = await api.put(`/dashboard/${serviceId}`, formData);
+      console.log(res.data);
+      this.services = this.services.map((service) =>
+      service._id === serviceId ? res.data : service
+      );
+
+    } catch (error) {
+     console.log(error) 
+    }
+  }
 }
 
 const serviceStore = new ServiceStore();

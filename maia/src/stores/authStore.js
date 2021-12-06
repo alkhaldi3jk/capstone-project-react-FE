@@ -15,11 +15,11 @@ class AuthStore {
     this.user = decode(token);
   };
 
-  setUser = (token) => {
-    localStorage.setItem("myToken", token);
-    api.defaults.headers.common.Authorization = `Bearer ${token}`;
-    this.user = decode(token);
-  };
+  // setUser = (token) => {
+  //   localStorage.setItem("myToken", token);
+  //   api.defaults.headers.common.Authorization = `Bearer ${token}`;
+  //   this.user = decode(token);
+  // };
 
   signup = async (userData) => {
     try {
@@ -58,8 +58,17 @@ class AuthStore {
       }
     }
   };
+  fetchUsers=async()=>{
+    try {
+      const res = await api.get("/dashboard")
+      this.user=res.data
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 const authStore = new AuthStore();
 authStore.checkForToken();
+authStore.fetchUsers()
 export default authStore;
