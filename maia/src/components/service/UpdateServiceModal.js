@@ -16,7 +16,7 @@ function UpdateServiceModal() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="light" onClick={handleShow}>
         Launch demo modal
       </Button>
 
@@ -46,7 +46,7 @@ function UpdateServiceModal() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>

@@ -15,7 +15,7 @@ function ServiceItem({ service }) {
           <tr>
       
             <Link to={`/dashboard/${service._id}`}>
-              <td>{service._id}</td>
+              {/* <td>{service._id}</td> */}
 
               <th>{service.name}</th>
             </Link>
@@ -25,7 +25,6 @@ function ServiceItem({ service }) {
           </tr>
         </tbody>
       </Table>
-      <ServiceDetail service={service}/>
       {/* <img
         src={service.image}
         alt={service.name}

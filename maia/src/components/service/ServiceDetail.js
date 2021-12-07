@@ -15,6 +15,7 @@ function ServiceDetail({service}) {
   return (
     <div>
         {service.name}
+ {serviceDetail}       
     </div>
   );
 }
