@@ -5,14 +5,15 @@ import { observer } from "mobx-react";
 import SigninModal from "../navbar/SigninModal";
 import SignupModal from "../navbar/SignupModal";
 import authStore from "../../stores/authStore";
-import { Nav } from "react-bootstrap";
+import { Nav, Table } from "react-bootstrap";
 import AddService from "./AddService";
 import { Col, Row } from "react-bootstrap";
 
-
 function ServiceList({ service }) {
-  const serviceList = serviceStore.services.map((service) => ( <Col className="list">
-    <ServiceItem service={service} key={service._id} /></Col>
+  const serviceList = serviceStore.services.map((service) => (
+    <Col className="list">
+      <ServiceItem service={service} key={service._id} />
+    </Col>
   ));
   return (
     <div>
@@ -41,7 +42,8 @@ function ServiceList({ service }) {
         </>
       )}
       <AddService service={service} />
-      <div>{serviceList}</div>
+
+        {serviceList}
     </div>
   );
 }

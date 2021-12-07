@@ -1,39 +1,32 @@
 import { observer } from "mobx-react";
 import React from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import serviceStore from "../../stores/serviceStore";
 import AddService from "./AddService";
+import ServiceDetail from "./ServiceDetail";
 import UpdateServiceModal from "./UpdateServiceModal";
 
 function ServiceItem({ service }) {
   return (
     <div>
-      <Table striped bordered hover variant="dark">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{service._id}</td>
-      <td>{service.name}</td>
-      <td><UpdateServiceModal/></td>
-      <td>     <img
-        src={service.image}
-        alt={service.name}
-        style={{ width: "10", height: "10" }}
-      /></td>
-    </tr>
+      <Table striped bordered hover>
+        <tbody>
+          <tr>
+      
+            <Link to={`/dashboard/${service._id}`}>
+              <td>{service._id}</td>
 
-
-  </tbody>
-</Table>
-      {/* <text>{service.name}</text>
-      <img
+              <th>{service.name}</th>
+            </Link>
+            <td>
+              <UpdateServiceModal />
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+      <ServiceDetail service={service}/>
+      {/* <img
         src={service.image}
         alt={service.name}
         style={{ width: "10", height: "10" }}
