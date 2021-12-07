@@ -25,9 +25,9 @@ function SignupModal() {
 
   return (
     <>
-      <Button variant="outline-secondary" onClick={handleShow}>
+      {/* <Button variant="light" onClick={handleShow}>
         Signup
-      </Button>
+      </Button> */}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

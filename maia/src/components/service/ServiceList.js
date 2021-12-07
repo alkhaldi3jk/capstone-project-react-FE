@@ -7,7 +7,7 @@ import SignupModal from "../navbar/SignupModal";
 import authStore from "../../stores/authStore";
 import { Nav, Table } from "react-bootstrap";
 import AddService from "./AddService";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row,Button } from "react-bootstrap";
 
 function ServiceList({ service }) {
   const serviceList = serviceStore.services.map((service) => (
@@ -20,8 +20,6 @@ function ServiceList({ service }) {
       {!authStore.user ? (
         <>
           <SigninModal />
-
-          <SignupModal />
         </>
       ) : (
         <>
@@ -30,18 +28,20 @@ function ServiceList({ service }) {
           </div>
 
           <div>
-            <Nav.Link
-              href=""
-              variant="contained"
-              justify="space-between"
+            {/* <Nav.Link */}
+            {/* <Button
+              // href=""
+              variant="light"
+              // justify="space-between"
               onClick={authStore.logout}
             >
               Signout
-            </Nav.Link>
+              </Button> */}
+            {/* </Nav.Link> */}
           </div>
         </>
       )}
-      <AddService service={service} />
+      {/* <AddService service={service} /> */}
 
         {serviceList}
     </div>

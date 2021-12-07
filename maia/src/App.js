@@ -1,3 +1,4 @@
+import  Navbar  from "./components/Navbar";
 import { Route, Router, Switch } from "react-router";
 import "./App.css";
 import ServiceDetail from "./components/service/ServiceDetail";
@@ -7,12 +8,13 @@ import UserList from "./components/users/UserList";
 function App() {
   return (
     <div className="App">
-      <h1>HI</h1>
+      <Navbar/>
+      <h1>Maia Admin</h1>
       <Switch>
         <Route exact path="/dashboar/:serviceId">
           <ServiceDetail />
         </Route>
-        <Route path="/dashboard">
+        <Route exact path="/">
           <ServiceList />
         </Route>
       </Switch>
