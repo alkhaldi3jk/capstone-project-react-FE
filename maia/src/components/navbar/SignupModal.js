@@ -31,6 +31,7 @@ function SignupModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
+          {/* REVIEW: Fix title */}
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -70,7 +71,6 @@ function SignupModal() {
                 />
               </Col>
             </Form.Group>
-
           </Form>
         </Modal.Body>
         <Modal.Footer>

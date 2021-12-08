@@ -4,6 +4,8 @@ import { useState } from "react";
 import authStore from "../../stores/authStore";
 import { observer } from "mobx-react";
 
+// REVIEW: Why is the signin and signup int he navbar folder??
+
 function SigninModal() {
   const [show, setShow] = useState(false);
 
@@ -30,6 +32,7 @@ function SigninModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
+          {/* REVIEW: Fix title */}
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>

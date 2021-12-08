@@ -25,9 +25,12 @@ function AddService() {
   };
 
   return (
+    // REVIEW: This can be a fragment instead of a div
     <div>
       {authStore.user ? (
+        // REVIEW: You dont need the fragment <> </> here
         <>
+          {/* REVIEW: I think you mean secondary */}
           <Button variant="secoundary" onClick={handleShow}>
             Try Adding a New Service
           </Button>

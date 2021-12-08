@@ -11,21 +11,23 @@ function UpdateServiceModal() {
   const handleShow = () => setShow(true);
   const handleImage = (event) =>
     setService({ ...service, image: event.target.files[0] });
-    const handleChange = (event) =>
+  const handleChange = (event) =>
     setService({ ...service, [event.target.name]: event.target.value });
 
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
+        {/* REVIEW: Remove dummy text */}
         Launch demo modal
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
+          {/*  REVIEW: Put a proper title  */}
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form.Control
+          <Form.Control
             name="name"
             type="text"
             placeholder="choose a name of your category"

@@ -9,6 +9,7 @@ class ServiceStore {
     makeAutoObservable(this);
   }
 
+  // REVIEW: You have a typo: fetchServices
   fetchSrvices = async () => {
     try {
       const res = await api.get("/");
@@ -30,20 +31,21 @@ class ServiceStore {
     }
   };
 
-  updateService=async (updatedService,serviceId)=>{
+  updateService = async (updatedService, serviceId) => {
     try {
       const formData = new FormData();
-      for (const key in updatedService) formData.append(key, updatedService[key]);
+      for (const key in updatedService)
+        formData.append(key, updatedService[key]);
       const res = await api.put(`/dashboard/${serviceId}`, formData);
+      // REVIEW: Remove console log if you're done with it
       console.log(res.data);
       this.services = this.services.map((service) =>
-      service._id === serviceId ? res.data : service
+        service._id === serviceId ? res.data : service
       );
-
     } catch (error) {
-     console.log(error) 
+      console.log(error);
     }
-  }
+  };
 }
 
 const serviceStore = new ServiceStore();

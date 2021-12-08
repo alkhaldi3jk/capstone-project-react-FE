@@ -10,10 +10,10 @@ import UpdateServiceModal from "./UpdateServiceModal";
 function ServiceItem({ service }) {
   return (
     <div>
+      {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
       <Table striped bordered hover>
         <tbody>
           <tr>
-      
             <Link to={`/dashboard/${service._id}`}>
               <td>{service._id}</td>
 
@@ -25,7 +25,7 @@ function ServiceItem({ service }) {
           </tr>
         </tbody>
       </Table>
-      <ServiceDetail service={service}/>
+      <ServiceDetail service={service} />
       {/* <img
         src={service.image}
         alt={service.name}
