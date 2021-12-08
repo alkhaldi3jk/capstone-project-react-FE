@@ -16,7 +16,7 @@ import {
   MDBDropdownLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-import { Navbar, Button, Card } from "react-bootstrap";
+import { Navbar, Button, Card, Nav } from "react-bootstrap";
 import AddService from "./service/AddService";
 import authStore from "../stores/authStore";
 import SigninModal from "./navbar/SigninModal";
@@ -51,28 +51,10 @@ export default function App({ service }) {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              {
-                (authStore.user === null ? (
-                  // <MDBNavbarItem>
-                  //   <MDBNavbarLink>
-                      <SigninModal />
-                  //   </MDBNavbarLink>
-                  // </MDBNavbarItem>
-                ) : (
-                  // <MDBNavbarLink active aria-current="page">
-                    <Button
-                      variant="light"
-                      onClick={authStore.logout}
-                    >
-                      Signout
-                    </Button>
-                  // </MDBNavbarLink>
-                ))
-              }
-            </MDBNavbarItem>
-
-            <MDBNavbarItem>
-              <MDBNavbarLink >
+            <MDBNavbarLink>
+               <SigninModal/>
+              </MDBNavbarLink>
+              <MDBNavbarLink>
                 <AddService service={service} />
               </MDBNavbarLink>
             </MDBNavbarItem>
