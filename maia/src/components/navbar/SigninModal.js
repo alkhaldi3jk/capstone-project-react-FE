@@ -24,9 +24,81 @@ function SigninModal() {
 
   return (
     <>
-      {/* <Button variant="light" onClick={handleShow}>
+      {authStore.user === null ? (
+        <>
+          <Button variant="light" onClick={handleShow}>
+            Signin
+          </Button>
+
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group
+                  as={Row}
+                  className="mb-3"
+                  controlId="formHorizontalEmail"
+                >
+                  <Form.Label column sm={2}>
+                    Username
+                  </Form.Label>
+                  <Col sm={10}>
+                    <Form.Control
+                      onChange={handleChange}
+                      name="username"
+                      required
+                      placeholder="Username"
+                    />
+                  </Col>
+                </Form.Group>
+
+                <Form.Group
+                  as={Row}
+                  className="mb-3"
+                  controlId="formHorizontalPassword"
+                >
+                  <Form.Label column sm={2}>
+                    Password
+                  </Form.Label>
+                  <Col sm={10}>
+                    <Form.Control
+                      name="password"
+                      required
+                      placeholder="Password"
+                      onChange={handleChange}
+                    />
+                  </Col>
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="outline-secondary" onClick={handleSubmit}>
+                Signin
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </>
+      ) : (
+        <>
+          <Button
+            // href=""
+            variant="light"
+            // justify="space-between"
+            onClick={authStore.logout}
+          >
+            Signout
+          </Button>
+        </>
+      )}
+{/* 
+      <Button variant="light" onClick={handleShow}>
         Signin
-      </Button> */}
+      </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -80,6 +152,7 @@ function SigninModal() {
           </Button>
         </Modal.Footer>
       </Modal>
+    */}
     </>
   );
 }
