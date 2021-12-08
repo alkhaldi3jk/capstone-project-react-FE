@@ -17,7 +17,8 @@ function ServiceList({ service }) {
   ));
   return (
     <div>
-      {!authStore.user ? (
+
+      {/* {!authStore.user ? (
         <>
           <SigninModal />
         </>
@@ -28,19 +29,19 @@ function ServiceList({ service }) {
           </div>
 
           <div>
-            {/* <Nav.Link */}
-            {/* <Button
+            <Nav.Link >
+             <Button
               // href=""
               variant="light"
               // justify="space-between"
-              onClick={authStore.logout}
-            >
+              onClick={authStore.logout}>
+           
               Signout
-              </Button> */}
-            {/* </Nav.Link> */}
+              </Button> 
+            </Nav.Link>
           </div>
         </>
-      )}
+      )} */}
       {/* <AddService service={service} /> */}
 
         {serviceList}
