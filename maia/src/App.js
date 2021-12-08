@@ -17,11 +17,11 @@ function App() {
           <img src="https://cdn.discordapp.com/attachments/912274609162833922/917847105937231882/Screen_Shot_2021-11-29_at_10.19.15_PM.png" style={{width:250, marginTop: -7}} />
           </a>
       <Switch>
-        <Route exact path="/dashboar/:serviceId">
-          <ServiceDetail />
-        </Route>
-        <Route exact path="/">
+      <Route exact path="/">
           <ServiceList />
+        </Route>
+        <Route exact path="/dashboard/:serviceId">
+          <ServiceDetail />
         </Route>
       </Switch>
     </div>

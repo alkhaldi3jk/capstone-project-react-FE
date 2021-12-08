@@ -68,3 +68,15 @@
     background-color: #ffffff;
     overflow: visible;
   }
+
+  .text {
+    color: gray;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .text2 {
+    color: rgb(102, 10, 102);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }

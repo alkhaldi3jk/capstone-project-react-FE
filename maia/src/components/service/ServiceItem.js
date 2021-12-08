@@ -13,7 +13,7 @@ import UpdateServiceModal from "./UpdateServiceModal";
 //       <Table striped bordered hover>
 //         <tbody>
 //           <tr>
-      
+
 //             <Link to={`/dashboard/${service._id}`}>
 //               {/* <td>{service._id}</td> */}
 
@@ -36,15 +36,12 @@ import UpdateServiceModal from "./UpdateServiceModal";
 
 // export default observer(ServiceItem);
 // import React from 'react';
-import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 import { Button } from "react-bootstrap";
 import ServiceUpdateModal from "./ServiceUpdateModal";
-const BasicTable = ({service}) => {
-  const handleDelete = () => serviceStore.deleteService(service._id);
-
+const BasicTable = ({ service }) => {
   return (
-    <MDBTable striped >
-      
+    <MDBTable striped>
       <MDBTableHead>
         <tr>
           <th></th>
@@ -52,26 +49,24 @@ const BasicTable = ({service}) => {
           <th></th>
         </tr>
       </MDBTableHead>
-      <MDBTableBody flex-direction= "column">
+      <MDBTableBody flex-direction="column">
         <tr>
-          <td >1</td>
-          <td><Link to={`/dashboard/${service._id}`}>
+          <td>*</td>
+          <td><Link className="text2" to={`/dashboard/${service._id}`}>
               {/* <td>{service._id}</td> */}
 
-               <th>{service.name}</th>
-             </Link></td>
-          <td> <Button variant="secondary">Approve</Button></td>
-          <td> <Button variant="secondary">Deny</Button></td>
-<td>        <ServiceUpdateModal oldService={service} />
-</td>
-<td>          <Button variant="secondary" onClick={handleDelete} variant="danger">
-            DELETE
-          </Button></td>
+          <th>{service.name}</th>
+          </Link></td> 
+          <td>
+            <Button variant="secondary">Approve</Button>
+          </td>
+          <td>
+            <Button variant="secondary">Deny</Button>
+          </td>
         </tr>
-
       </MDBTableBody>
     </MDBTable>
   );
-}
+};
 
 export default BasicTable;
