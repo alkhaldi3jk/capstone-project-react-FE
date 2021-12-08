@@ -61,7 +61,7 @@ function AddService() {
             name="image"
             onChange={handleImage}
             className="mb-3"
-          >
+          />
             
               <Form.Control
             name="subtitle"
@@ -71,7 +71,7 @@ function AddService() {
           />
             <Form.Label>Share Your Idea</Form.Label>
             <Form.Control type="file" />
-          </Form.Group>
+          {/* </Form.Group> */}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
