@@ -11,7 +11,7 @@ import {
   MDBBtn,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-import { Navbar, Button, Card, Nav } from "react-bootstrap";
+import { Navbar, Button, Card, Nav, Form } from "react-bootstrap";
 import AddService from "./service/AddService";
 import authStore from "../stores/authStore";
 import SigninModal from "./navbar/SigninModal";
@@ -22,11 +22,11 @@ export default function App({ service }) {
   const [showBasic, setShowBasic] = useState(false);
   const [query, setQuery] = useState("");
 
-  const servicesearch = serviceStore.services
-    .filter((service) =>
-      service.name.toLowerCase().includes(query.toLowerCase())
-    )
-    .map((service) => <Card key={service._id} product={service} />);
+  // const servicesearch = serviceStore.services
+  //   .filter((service) =>
+  //     service.name.toLowerCase().includes(query.toLowerCase())
+  //   )
+  //   .map((service) => <Card key={service._id} product={service} />);
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
@@ -84,16 +84,14 @@ export default function App({ service }) {
             </MDBNavbarItem>
           </MDBNavbarNav>
 
-          <form className="d-flex input-group w-auto">
-            <input
+          {/* <Form.Control className="d-flex input-group w-auto"
               type="search"
               className="form-control"
               placeholder="Search for Service"
               aria-label="Search"
               onChange={(event) => setQuery(event.target.value)}
             />
-            <MDBBtn color="light">Search</MDBBtn>
-          </form>
+            <MDBBtn color="light">Search</MDBBtn> */}
         </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>

@@ -41,6 +41,8 @@ import { Button } from "react-bootstrap";
 import ServiceUpdateModal from "./ServiceUpdateModal";
 const BasicTable = ({ service }) => {
   return (
+
+    
     <MDBTable striped>
       <MDBTableHead>
         <tr>
