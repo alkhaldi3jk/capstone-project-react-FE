@@ -15,6 +15,9 @@ function AddService() {
   const handleChange = (event) =>
     setService({ ...service, [event.target.name]: event.target.value });
 
+    const handleChange2 = (event) =>
+    setService({ ...service, [event.target.subtitle]: event.target.value });
+    
   const handleImage = (event) =>
     setService({ ...service, image: event.target.files[0] });
 
@@ -59,6 +62,13 @@ function AddService() {
             onChange={handleImage}
             className="mb-3"
           >
+            
+              <Form.Control
+            name="subtitle"
+            type="text"
+            placeholder="subtitle"
+            onChange={handleChange2}
+          />
             <Form.Label>Share Your Idea</Form.Label>
             <Form.Control type="file" />
           </Form.Group>

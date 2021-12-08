@@ -54,13 +54,13 @@ function ServiceUpdateModal({ oldService }) {
             />
           </InputGroup>
           <InputGroup className="mb-3">
-            <InputGroup.Text>Description</InputGroup.Text>
+            <InputGroup.Text>subtitle</InputGroup.Text>
             <FormControl
-              name="description"
-              value={service.description}
+              name="subtitle"
+              value={service.subtitle}
               type="text"
               onChange={handleChange}
-              placeholder="Description"
+              placeholder="subtitle"
             />
           </InputGroup>
          
