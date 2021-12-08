@@ -4,6 +4,7 @@ import { Redirect, useParams } from "react-router";
 import serviceStore from "../../stores/serviceStore";
 import ServiceItem from "./ServiceItem";
 import ServiceList from "./ServiceList";
+import ServiceUpdateModal from "./ServiceUpdateModal";
 
 function ServiceDetail({service}) {
   const {serviceId} = useParams();
@@ -15,7 +16,7 @@ function ServiceDetail({service}) {
   return (
     <div>
         {service.name}
- {serviceDetail}       
+        <ServiceUpdateModal oldService={service} />
     </div>
   );
 }

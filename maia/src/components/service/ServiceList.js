@@ -9,6 +9,8 @@ import { Nav, Table } from "react-bootstrap";
 import AddService from "./AddService";
 import { Col, Row,Button } from "react-bootstrap";
 
+
+
 function ServiceList({ service }) {
   const serviceList = serviceStore.services.map((service) => (
     <Col className="list">

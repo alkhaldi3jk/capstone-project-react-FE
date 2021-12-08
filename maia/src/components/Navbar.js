@@ -9,11 +9,6 @@ import {
   MDBNavbarItem,
   MDBNavbarLink,
   MDBBtn,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBDropdownLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import { Navbar, Button, Card, Nav } from "react-bootstrap";
@@ -55,15 +50,15 @@ export default function App({ service }) {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-
-              {/* {
-                (authStore.user === null ? ( */}
+{/* 
+              {
+                (authStore.user === null ? (
                   <MDBNavbarItem>
                     <MDBNavbarLink>
                       <SigninModal />
                     </MDBNavbarLink>
                   </MDBNavbarItem>
-                 {/* ) : ( */}
+                  ) : ( 
                    <MDBNavbarLink active aria-current="page">
                     <Button
                       variant="light"
@@ -72,12 +67,12 @@ export default function App({ service }) {
                       Signout
                     </Button>
                   </MDBNavbarLink>
-                 {/* ))
-               } */}
+                  ))
+               }  */}
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBNavbarLink >
+              {/* <MDBNavbarLink > */}
 
             <MDBNavbarLink>
                <SigninModal/>
