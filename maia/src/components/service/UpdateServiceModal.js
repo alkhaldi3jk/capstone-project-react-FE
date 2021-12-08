@@ -17,7 +17,7 @@ function UpdateServiceModal() {
   return (
     <>
       <Button variant="light" onClick={handleShow}>
-        Launch demo modal
+        Update
       </Button>
 
       <Modal show={show} onHide={handleClose}>

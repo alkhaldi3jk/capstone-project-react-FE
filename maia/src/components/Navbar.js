@@ -38,6 +38,10 @@ export default function App({ service }) {
       <MDBContainer fluid>
         <MDBNavbarBrand href="/">Maia Services </MDBNavbarBrand>
 
+          {/* <a>
+          <img src="https://cdn.discordapp.com/attachments/912274609162833922/917847105937231882/Screen_Shot_2021-11-29_at_10.19.15_PM.png" style={{width:100, marginTop: -7}} />
+          </a> */}
+        
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
@@ -51,24 +55,24 @@ export default function App({ service }) {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              {
-                (authStore.user === null ? (
-                  // <MDBNavbarItem>
-                  //   <MDBNavbarLink>
+              {/* {
+                (authStore.user === null ? ( */}
+                  <MDBNavbarItem>
+                    <MDBNavbarLink>
                       <SigninModal />
-                  //   </MDBNavbarLink>
-                  // </MDBNavbarItem>
-                ) : (
-                  // <MDBNavbarLink active aria-current="page">
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                 {/* ) : ( */}
+                   <MDBNavbarLink active aria-current="page">
                     <Button
                       variant="light"
                       onClick={authStore.logout}
                     >
                       Signout
                     </Button>
-                  // </MDBNavbarLink>
-                ))
-              }
+                  </MDBNavbarLink>
+                 {/* ))
+               } */}
             </MDBNavbarItem>
 
             <MDBNavbarItem>
