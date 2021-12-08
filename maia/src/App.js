@@ -12,9 +12,7 @@ import { observer } from "mobx-react";
 function App() {
   return (
     <div className="App">
-      <Navbar />
 
-      <h1>Maia Admin</h1>
       <Switch>
         <Route exact path="/dashboar/:serviceId">
           <ServiceDetail />
