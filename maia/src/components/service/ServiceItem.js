@@ -37,24 +37,36 @@ import UpdateServiceModal from "./UpdateServiceModal";
 // export default observer(ServiceItem);
 // import React from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
-import Button from "@restart/ui/esm/Button";
-
+import { Button } from "react-bootstrap";
+import ServiceUpdateModal from "./ServiceUpdateModal";
 const BasicTable = ({service}) => {
+  const handleDelete = () => serviceStore.deleteService(service._id);
+
   return (
     <MDBTable striped >
       
       <MDBTableHead>
         <tr>
-          <th>#</th>
-          <th>Service</th>
-          <th>Service Detail</th>
+          <th></th>
+          <th></th>
+          <th></th>
         </tr>
       </MDBTableHead>
       <MDBTableBody flex-direction= "column">
         <tr>
           <td >1</td>
-          <td>{service.name}</td>
-          <td> <Button>Detail</Button></td>
+          <td><Link to={`/dashboard/${service._id}`}>
+              {/* <td>{service._id}</td> */}
+
+               <th>{service.name}</th>
+             </Link></td>
+          <td> <Button variant="secondary">Approve</Button></td>
+          <td> <Button variant="secondary">Deny</Button></td>
+<td>        <ServiceUpdateModal oldService={service} />
+</td>
+<td>          <Button variant="secondary" onClick={handleDelete} variant="danger">
+            DELETE
+          </Button></td>
         </tr>
 
       </MDBTableBody>
