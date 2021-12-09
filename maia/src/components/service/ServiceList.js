@@ -39,13 +39,13 @@ function ServiceList({ service }) {
   return (
     <div>
           
-          <Form.Control className="d-flex input-group w-auto"
+          {/* <Form.Control className="d-flex input-group w-auto"
               type="search"
               // className="form-control"
               placeholder="Search for Service"
               aria-label="Search"
               onChange={(event) => setQuery(event.target.value)}
-            />
+            /> */}
  
       {/* {!authStore.user ? (
         <>

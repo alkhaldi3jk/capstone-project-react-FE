@@ -31,8 +31,8 @@ function AddService() {
     <div>
       {authStore.user ? (
         <>
-          <Button variant="light" onClick={handleShow}>
-            Try Adding a New Service
+          <Button variant="secondary" onClick={handleShow}>
+             Add New Service
           </Button>
         </>
       ) : (
