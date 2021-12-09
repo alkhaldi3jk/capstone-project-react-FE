@@ -87,7 +87,7 @@ function SigninModal() {
         <>
           <Button
             // href=""
-            variant="light"
+            variant="secondary"
             // justify="space-between"
             onClick={authStore.logout}
           >

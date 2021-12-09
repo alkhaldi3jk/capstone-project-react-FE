@@ -19,7 +19,7 @@ function App() {
  <a>
           <img src="https://cdn.discordapp.com/attachments/912274609162833922/917847105937231882/Screen_Shot_2021-11-29_at_10.19.15_PM.png" style={{width:250 , marginTop: -7}} />
           </a>
-
+{/* <h1 className="text">Maia Services</h1> */}
       <Switch>
       <Route exact path="/">
           <ServiceList />
