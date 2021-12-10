@@ -24,7 +24,7 @@ function App() {
       <Route exact path="/">
           <ServiceList />
         </Route>
-        <Route exact path="/dashboard/:serviceId">
+        <Route exact path="/services/:serviceId">
           <ServiceDetail />
         </Route>
       </Switch>

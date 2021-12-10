@@ -1,4 +1,7 @@
 import React from "react";
+
+import { Row, Table } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 import { Button } from "react-bootstrap";
@@ -10,7 +13,7 @@ import { Button } from "react-bootstrap";
 //         <tbody>
 //           <tr>
 
-//             <Link to={`/dashboard/${service._id}`}>
+//             <Link to={`/services/${service._id}`}>
 //               {/* <td>{service._id}</td> */}
 
 //               <th>{service.name}</th>
@@ -36,7 +39,9 @@ import { Button } from "react-bootstrap";
 const BasicTable = ({ service }) => {
   return (
 
+    <Row>
     // {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
+
     <MDBTable striped>
       <MDBTableHead>
         <tr>
@@ -48,7 +53,7 @@ const BasicTable = ({ service }) => {
       <MDBTableBody flex-direction="column">
         <tr>
           <td>*</td>
-          <td><Link className="text2" to={`/dashboard/${service._id}`}>
+          <td><Link className="text2" to={`/services/${service._id}`}>
               {/* <td>{service._id}</td> */}
 
           <th>{service.name}</th>
@@ -62,6 +67,7 @@ const BasicTable = ({ service }) => {
         </tr>
       </MDBTableBody>
     </MDBTable>
+    </Row>
   );
 };
 

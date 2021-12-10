@@ -13,7 +13,7 @@ function ServiceDetail() {
   const service = serviceStore.services.find(
     (service) => service._id === serviceId
   );
-  if (!service) return <Redirect to="/dashboard" />;
+  if (!service) return <Redirect to="/services" />;
 
   return (
     <div >

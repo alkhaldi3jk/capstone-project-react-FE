@@ -53,10 +53,12 @@ class AuthStore {
   };
   fetchUsers = async () => {
     try {
+
       const res = await api.get("/users");
       this.user = res.data;
       // REVIEW: this.user is reserved for the logged in user, you're overwriting it with the list of all users.
       // This is incorrect. I recommend you put all users in their own store.
+      
     } catch (error) {
       console.log(error);
     }
