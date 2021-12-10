@@ -15,12 +15,6 @@ class AuthStore {
     this.user = decode(token);
   };
 
-  // setUser = (token) => {
-  //   localStorage.setItem("myToken", token);
-  //   api.defaults.headers.common.Authorization = `Bearer ${token}`;
-  //   this.user = decode(token);
-  // };
-
   signup = async (userData) => {
     try {
       const res = await api.post("/signup", userData);
@@ -46,7 +40,6 @@ class AuthStore {
   };
 
   checkForToken = () => {
-    // this.user = null
     const token = localStorage.getItem("myToken");
     if (token) {
       const currentTime = Date.now(); // give us the current time
@@ -58,17 +51,19 @@ class AuthStore {
       }
     }
   };
-  fetchUsers=async()=>{
+  fetchUsers = async () => {
     try {
-      const res = await api.get("/dashboard")
-      this.user=res.data
+      const res = await api.get("/users");
+      this.user = res.data;
+      // REVIEW: this.user is reserved for the logged in user, you're overwriting it with the list of all users.
+      // This is incorrect. I recommend you put all users in their own store.
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 }
 
 const authStore = new AuthStore();
 authStore.checkForToken();
-authStore.fetchUsers()
+authStore.fetchUsers();
 export default authStore;

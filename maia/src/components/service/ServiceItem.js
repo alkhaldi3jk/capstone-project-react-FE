@@ -1,12 +1,8 @@
-import { observer } from "mobx-react";
 import React from "react";
-import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import serviceStore from "../../stores/serviceStore";
-import AddService from "./AddService";
-import ServiceDetail from "./ServiceDetail";
-import UpdateServiceModal from "./UpdateServiceModal";
-
+import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
+import { Button } from "react-bootstrap";
+ {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
 // function ServiceItem({ service }) {
 //   return (
 //     <div>
@@ -36,13 +32,11 @@ import UpdateServiceModal from "./UpdateServiceModal";
 
 // export default observer(ServiceItem);
 // import React from 'react';
-import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
-import { Button } from "react-bootstrap";
-import ServiceUpdateModal from "./ServiceUpdateModal";
+
 const BasicTable = ({ service }) => {
   return (
 
-    
+    // {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
     <MDBTable striped>
       <MDBTableHead>
         <tr>
