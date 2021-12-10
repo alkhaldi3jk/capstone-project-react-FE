@@ -9,7 +9,7 @@ class ServiceStore {
     makeAutoObservable(this);
   }
 
-  fetchSrvices = async () => {
+  fetchServices = async () => {
     try {
       const res = await api.get("/services");
       this.services = res.data;
@@ -57,5 +57,5 @@ class ServiceStore {
 }
 
 const serviceStore = new ServiceStore();
-serviceStore.fetchSrvices();
+serviceStore.fetchServices();
 export default serviceStore;
