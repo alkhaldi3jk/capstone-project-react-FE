@@ -9,9 +9,9 @@ class ServiceStore {
     makeAutoObservable(this);
   }
 
-  fetchSrvices = async () => {
+  fetchServices = async () => {
     try {
-      const res = await api.get("/");
+      const res = await api.get("/services");
       this.services = res.data;
       this.isLoading = false;
     } catch (error) {
@@ -23,7 +23,7 @@ class ServiceStore {
     try {
       const formData = new FormData();
       for (const key in newService) formData.append(key, newService[key]);
-      const res = await api.post("/dashboard", formData);
+      const res = await api.post("/services", formData);
       this.services.push(res.data);
     } catch (error) {
       console.log(error);
@@ -35,7 +35,7 @@ class ServiceStore {
       const formData = new FormData();
       for (const key in updatedService)
         formData.append(key, updatedService[key]);
-      const res = await api.put(`/dashboard/${serviceId}`, formData);
+      const res = await api.put(`/services/${serviceId}`, formData);
       console.log(res.data);
       this.services = this.services.map((service) =>
         service._id === serviceId ? res.data : service
@@ -46,7 +46,7 @@ class ServiceStore {
   };
   deleteService = async (serviceId) => {
     try {
-      await api.delete(`/dashboard/${serviceId}`);
+      await api.delete(`/services/${serviceId}`);
       this.services = this.services.filter(
         (service) => service._id !== serviceId
       );
@@ -57,5 +57,5 @@ class ServiceStore {
 }
 
 const serviceStore = new ServiceStore();
-serviceStore.fetchSrvices();
+serviceStore.fetchServices();
 export default serviceStore;
