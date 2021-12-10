@@ -1,6 +1,6 @@
 import { observer } from "mobx-react";
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import serviceStore from "../../stores/serviceStore";
 import AddService from "./AddService";
@@ -14,7 +14,7 @@ import UpdateServiceModal from "./UpdateServiceModal";
 //         <tbody>
 //           <tr>
 
-//             <Link to={`/dashboard/${service._id}`}>
+//             <Link to={`/services/${service._id}`}>
 //               {/* <td>{service._id}</td> */}
 
 //               <th>{service.name}</th>
@@ -41,7 +41,7 @@ import { Button } from "react-bootstrap";
 import ServiceUpdateModal from "./ServiceUpdateModal";
 const BasicTable = ({ service }) => {
   return (
-
+    <Row>
     
     <MDBTable striped>
       <MDBTableHead>
@@ -54,7 +54,7 @@ const BasicTable = ({ service }) => {
       <MDBTableBody flex-direction="column">
         <tr>
           <td>*</td>
-          <td><Link className="text2" to={`/dashboard/${service._id}`}>
+          <td><Link className="text2" to={`/services/${service._id}`}>
               {/* <td>{service._id}</td> */}
 
           <th>{service.name}</th>
@@ -68,6 +68,7 @@ const BasicTable = ({ service }) => {
         </tr>
       </MDBTableBody>
     </MDBTable>
+    </Row>
   );
 };
 

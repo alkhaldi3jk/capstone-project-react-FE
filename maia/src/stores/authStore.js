@@ -60,7 +60,7 @@ class AuthStore {
   };
   fetchUsers=async()=>{
     try {
-      const res = await api.get("/dashboard")
+      const res = await api.get("/users")
       this.user=res.data
     } catch (error) {
       console.log(error)
