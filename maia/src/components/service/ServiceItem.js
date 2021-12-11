@@ -1,45 +1,13 @@
 import React from "react";
-
-import { Row, Table } from "react-bootstrap";
-
 import { Link } from "react-router-dom";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 import { Button } from "react-bootstrap";
- {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
-// function ServiceItem({ service }) {
-//   return (
-//     <div>
-//       <Table striped bordered hover>
-//         <tbody>
-//           <tr>
-
-//             <Link to={`/services/${service._id}`}>
-//               {/* <td>{service._id}</td> */}
-
-//               <th>{service.name}</th>
-//             </Link>
-//             <td>
-//               <UpdateServiceModal />
-//             </td>
-//           </tr>
-//         </tbody>
-//       </Table>
-//       {/* <img
-//         src={service.image}
-//         alt={service.name}
-//         style={{ width: "10", height: "10" }}
-//       /> */}
-//     </div>
-//   );
-// }
-
-// export default observer(ServiceItem);
-// import React from 'react';
-
-const BasicTable = ({ service }) => {
+import { observer } from "mobx-react";
+{
+  /* REVIEW: Why is every service a table? It should be just a row in the table. */
+}
+function ServiceItem({ service }) {
   return (
-
-    <Row>
     // {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
 
     <MDBTable striped>
@@ -50,25 +18,26 @@ const BasicTable = ({ service }) => {
           <th></th>
         </tr>
       </MDBTableHead>
-      <MDBTableBody flex-direction="column">
-        <tr>
-          <td>*</td>
-          <td><Link className="text2" to={`/services/${service._id}`}>
-              {/* <td>{service._id}</td> */}
+      <MDBTableBody flex-direction="column" >
+          <tr>
+            <td>*</td>
+            <td>
+              <Link className="text2" to={`/services/${service._id}`}>
+                {/* <td>{service._id}</td> */}
 
-          <th>{service.name}</th>
-          </Link></td> 
-          <td>
-            <Button variant="secondary">Approve</Button>
-          </td>
-          <td>
-            <Button variant="secondary">Deny</Button>
-          </td>
-        </tr>
+                <th>{service.name}</th>
+              </Link>
+            </td>
+            <td>
+              <Button variant="secondary">Approve</Button>
+            </td>
+            <td>
+              <Button variant="secondary">Deny</Button>
+            </td>
+          </tr>
       </MDBTableBody>
     </MDBTable>
-    </Row>
   );
-};
+}
 
-export default BasicTable;
+export default observer(ServiceItem);
