@@ -8,6 +8,7 @@ import { observer } from "mobx-react";
 }
 function ServiceItem({ service }) {
   return (
+      
     // {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
 
     <MDBTable striped>
@@ -18,23 +19,23 @@ function ServiceItem({ service }) {
           <th></th>
         </tr>
       </MDBTableHead>
-      <MDBTableBody flex-direction="column" >
-          <tr>
-            <td>*</td>
-            <td>
-              <Link className="text2" to={`/services/${service._id}`}>
-                {/* <td>{service._id}</td> */}
+      <MDBTableBody flex-direction="column">
+        <tr>
+          <td>*</td>
+          <td>
+            <Link className="text2" to={`/services/${service._id}`}>
+              {/* <td>{service._id}</td> */}
 
-                <th>{service.name}</th>
-              </Link>
-            </td>
-            <td>
-              <Button variant="secondary">Approve</Button>
-            </td>
-            <td>
-              <Button variant="secondary">Deny</Button>
-            </td>
-          </tr>
+              <th>{service.name}</th>
+            </Link>
+          </td>
+          <td>
+            <Button variant="secondary">Approve</Button>
+          </td>
+          <td>
+            <Button variant="secondary">Deny</Button>
+          </td>
+        </tr>
       </MDBTableBody>
     </MDBTable>
   );
