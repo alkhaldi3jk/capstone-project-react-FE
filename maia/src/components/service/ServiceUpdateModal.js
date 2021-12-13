@@ -8,6 +8,7 @@ function ServiceUpdateModal({ oldService }) {
   const [service, setService] = useState({
     name: oldService.name,
     image: oldService.image,
+    
   });
 
   const handleClose = () => setShow(false);

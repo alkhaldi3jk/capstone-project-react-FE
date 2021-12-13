@@ -8,9 +8,9 @@ export default function App({ service }) {
   const [showBasic, setShowBasic] = useState(false);
   const [query, setQuery] = useState("");
 
-  const serachBar = serviceStore.services.filter((service) =>
-    service.name.toLowerCase().includes(query.toLowerCase())
-  );
+  // const serachBar = serviceStore.services.filter((service) =>
+  //   service.name.toLowerCase().includes(query.toLowerCase())
+  // );
 
   return (
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">

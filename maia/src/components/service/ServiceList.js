@@ -5,7 +5,7 @@ import { observer } from "mobx-react";
 import { Col,Form } from "react-bootstrap";
 import { useState } from "react";
 
-function ServiceList({ service }) {
+function ServiceList() {
   const [query, setQuery] = useState("");
 
   const serviceList = serviceStore.services

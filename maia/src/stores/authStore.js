@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import api from "./api";
+import { api } from "./api";
 import decode from "jwt-decode";
 
 class AuthStore {

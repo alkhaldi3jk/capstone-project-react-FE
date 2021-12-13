@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import api from "./api";
+import { api } from "./api";
 
 class ServiceStore {
   services = [];
@@ -46,7 +46,7 @@ class ServiceStore {
   };
   deleteService = async (serviceId) => {
     try {
-      await api.delete(`/services/${serviceId}`);
+      await api.delete(`/services/${serviceId}/`);
       this.services = this.services.filter(
         (service) => service._id !== serviceId
       );

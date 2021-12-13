@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
-{
-  /* REVIEW: Why is every service a table? It should be just a row in the table. */
-}
-function ServiceItem({ service }) {
-  return (
-      
-    // {/* REVIEW: Why is every service a table? It should be just a row in the table. */}
+import serviceStore from "../../stores/serviceStore";
 
+
+function ServiceItem({ service }) {
+  const handleDelete = () => {
+    serviceStore.deleteService();
+  };
+  return (
     <MDBTable striped>
       <MDBTableHead>
         <tr>
@@ -25,7 +25,6 @@ function ServiceItem({ service }) {
           <td>
             <Link className="text2" to={`/services/${service._id}`}>
               {/* <td>{service._id}</td> */}
-
               <th>{service.name}</th>
             </Link>
           </td>
@@ -33,7 +32,9 @@ function ServiceItem({ service }) {
             <Button variant="secondary">Approve</Button>
           </td>
           <td>
-            <Button variant="secondary">Deny</Button>
+            <Button variant="secondary" onClick={handleDelete}>
+              Deny
+            </Button>
           </td>
         </tr>
       </MDBTableBody>
