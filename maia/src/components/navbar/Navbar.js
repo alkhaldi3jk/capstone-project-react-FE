@@ -46,6 +46,21 @@ export default function App({ service }) {
             </a>
           </li>
         </ul>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <Link class="nav-link" to="/users">
+              Accounts
+            </Link>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <Link class="nav-link" to="/services">
+              Services
+            </Link>
+          </li>
+        </ul>
+
       </div>
     </nav>
   );

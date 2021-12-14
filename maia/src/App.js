@@ -21,11 +21,14 @@ function App() {
           </a>
 {/* <h1 className="text">Maia Services</h1> */}
       <Switch>
-      <Route exact path="/">
+      <Route exact path="/services">
           <ServiceList />
         </Route>
         <Route exact path="/services/:serviceId">
           <ServiceDetail />
+        </Route>
+        <Route exact path="/users">
+          <UserList />
         </Route>
       </Switch>
     </div>

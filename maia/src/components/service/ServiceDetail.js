@@ -30,7 +30,7 @@ function ServiceDetail() {
           DELETE
         </Button>
       </p>
-      <ServiceDetailList options={service.option}/>
+      {/* <ServiceDetailList options={service.option}/> */}
     </div>
   );
 }
