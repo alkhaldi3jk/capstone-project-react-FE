@@ -26,7 +26,7 @@ export default function App({ service }) {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <Link class="nav-link" to="/">
@@ -34,25 +34,18 @@ export default function App({ service }) {
             </Link>
           </li>
         </ul>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        {/* <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link">
-              <SigninModal />
-            </a>
-          </li>
-          <li class="nav-item">
+            <a class="nav-link"> */}
+              {/* <SigninModal /> */}
+            {/* </a>
+          </li> */}
+          {/* <li class="nav-item">
             <a class="nav-link " variant="secondary">
-              <AddService service={service} />
-            </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/users">
-              Accounts
-            </Link>
-          </li>
-        </ul>
+              {/* <AddService service={service} /> */}
+            {/* </a>
+          </li> */}
+        {/* </ul>  */}
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <Link class="nav-link" to="/services">
@@ -60,8 +53,16 @@ export default function App({ service }) {
             </Link>
           </li>
         </ul>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <Link class="nav-link" to="/users">
+              Users
+            </Link>
+          </li>
+        </ul>
 
-      </div>
+
+       </div>
     </nav>
   );
 }

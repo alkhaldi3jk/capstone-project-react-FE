@@ -1,16 +1,24 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
 function UserItem({ user }) {
   return (
     <>
-    <Container>
-  <Row>
-    <Col xs>username</Col>
-    <Col xs={{ order: 12 }}>{user.username}</Col>
-    <Col xs={{ order: 1 }}>{user.email}</Col>
-  </Row>
-</Container>
+  <Table striped bordered hover>
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>E-mail</th>
+   </tr>
+   </thead>
+  <tbody>
+    <tr>
+    <td>{user.username}</td>
+    <td>{user.email}</td>
+    </tr>
+  </tbody>
+</Table>
       {/* <Row>
         <div> <Row>username</Row> {user.username}</div>
         <div> {user.email}</div>
