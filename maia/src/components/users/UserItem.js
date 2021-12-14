@@ -5,24 +5,15 @@ import { Table } from "react-bootstrap";
 function UserItem({ user }) {
   return (
     <>
-  <Table striped bordered hover>
-  <thead>
-    <tr>
-      <th>User name</th>
-      <th>E-mail</th>
-   </tr>
-   </thead>
-  <tbody>
-    <tr>
-    <td>{user.username}</td>
-    <td>{user.email}</td>
-    </tr>
+   <Table striped bordered hover>
+<tbody>
+<tr>
+<td width="50%">{user.email}</td>
+<td width="50%">{user.username}</td>
+
+  </tr>
   </tbody>
 </Table>
-      {/* <Row>
-        <div> <Row>username</Row> {user.username}</div>
-        <div> {user.email}</div>
-      </Row> */}
     </>
   );
 }
