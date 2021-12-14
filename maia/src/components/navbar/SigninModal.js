@@ -86,8 +86,7 @@ function SigninModal() {
       ) : (
         <>
           <Button
-            // href=""
-            variant="secondary"
+            style={{backgroundColor: "#4f59b1"}}
             // justify="space-between"
             onClick={authStore.logout}
           >

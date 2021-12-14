@@ -31,7 +31,9 @@ function AddService() {
     <div>
       {authStore.user ? (
         <>
-          <Button variant="secondary" onClick={handleShow}>
+          <Button 
+          style={{width:150, marginTop: -7, marginBottom: 4, backgroundColor: "#4f59b1"}}
+          onClick={handleShow}>
              Add New Service
           </Button>
         </>
@@ -52,7 +54,7 @@ function AddService() {
           <Form.Control
             name="name"
             type="text"
-            placeholder="choose a name of your service"
+            placeholder="choose a name for your service"
             onChange={handleChange}
           />
           <Form.Group
@@ -69,15 +71,19 @@ function AddService() {
             placeholder="subtitle"
             onChange={handleChange2}
           />
-            <Form.Label>Share Your Idea</Form.Label>
+            <Form.Label sm="10">Share Your Idea</Form.Label>
             <Form.Control type="file" />
           {/* </Form.Group> */}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button 
+          style={{backgroundColor: "#4f59b1"}} 
+          onClick={handleClose}>
             Close
           </Button>
-          <Button variant="secondary" onClick={handleSubmit}>
+          <Button 
+          style={{backgroundColor: "#4f59b1"}}
+          onClick={handleSubmit}>
             Submit
           </Button>
         </Modal.Footer>
