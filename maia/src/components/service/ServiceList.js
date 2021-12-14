@@ -13,9 +13,9 @@ function ServiceList() {
       service.name.toLowerCase().includes(query.toLowerCase())
     )
     .map((service) => (
-      <Col className="list">
+   
         <ServiceItem service={service} key={service._id} />
-      </Col>
+  
     ));
   return (
     <div>
