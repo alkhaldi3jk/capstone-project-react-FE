@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+
 import { Table } from "react-bootstrap";
 
 function UserItem({ user }) {
@@ -15,6 +16,7 @@ function UserItem({ user }) {
   </tbody>
 </Table>
     </>
+
   );
 }
 
