@@ -1,21 +1,16 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import authStore from "../../stores/authStore";
 
 function UserItem({ user }) {
   return (
-    <>
     <Container>
-  <Row>
-    <Col xs>username</Col>
-    <Col xs={{ order: 12 }}>{user.username}</Col>
-    <Col xs={{ order: 1 }}>{user.email}</Col>
-  </Row>
-</Container>
-      {/* <Row>
-        <div> <Row>username</Row> {user.username}</div>
-        <div> {user.email}</div>
-      </Row> */}
-    </>
+      <Row>
+        <Col xl={{ order: 12 }}>{user.username}</Col>
+        <Col xl={{ order: 1 }}>{user.email}</Col>
+        <Col>{authStore.user?.request}</Col>
+      </Row>
+    </Container>
   );
 }
 

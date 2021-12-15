@@ -33,8 +33,7 @@ class OptionStore {
   updateOption = async (updatedOption, optionId) => {
     try {
       const formData = new FormData();
-      for (const key in updatedOption)
-        formData.append(key, updatedOption[key]);
+      for (const key in updatedOption) formData.append(key, updatedOption[key]);
       const res = await api.put(`/options/${optionId}`, formData);
       console.log(res.data);
       this.options = this.options.map((option) =>
@@ -47,9 +46,7 @@ class OptionStore {
   deleteOption = async (optionId) => {
     try {
       await api.delete(`/options/${optionId}/`);
-      this.options = this.options.filter(
-        (option) => option._id !== optionId
-      );
+      this.options = this.options.filter((option) => option._id !== optionId);
     } catch (error) {
       console.log("optionStore -> deleteOption -> error", error);
     }
