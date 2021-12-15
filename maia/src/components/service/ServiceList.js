@@ -2,7 +2,7 @@ import React from "react";
 import serviceStore from "../../stores/serviceStore";
 import ServiceItem from "./ServiceItem";
 import { observer } from "mobx-react";
-import { Col,Form } from "react-bootstrap";
+import { Col, Form, Card, ListGroup, Table } from "react-bootstrap";
 import { useState } from "react";
 
 function ServiceList() {
@@ -17,19 +17,23 @@ function ServiceList() {
         <ServiceItem service={service} key={service._id} />
   
     ));
-  return (
-    <div>
-      <Form.Control className="d-flex input-group w-auto"
-              type="search"
-              // className="form-control"
-              placeholder="Search for Service"
-              aria-label="Search"
-              onChange={(event) => setQuery(event.target.value)}
-            />
+    return <div>
+    <a>
+    <img src="https://cdn.discordapp.com/attachments/912274609162833922/917847105937231882/Screen_Shot_2021-11-29_at_10.19.15_PM.png" style={{width:250 , marginTop: -7}} />
+          </a>
+    <br />
+  <h6>Maia Services</h6><br />
+  <Table striped bordered hover size="sm">
+  <thead>
+    <tr>
+    <th >Services</th>
+   </tr>
+   </thead>
+</Table>
+          
 
-      {serviceList}
+{serviceList}
     </div>
-  );
 }
 
 export default observer(ServiceList);

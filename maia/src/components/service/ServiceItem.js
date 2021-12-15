@@ -12,6 +12,7 @@ function ServiceItem({ service }) {
   return (
     <Container>
       <Row>
+        
         <Col xl={{ order: 12 }}>
           <Link className="text2" to={`/services/${service._id}`}>
             {/* <td>{service._id}</td> */}
@@ -20,6 +21,7 @@ function ServiceItem({ service }) {
         </Col>
       </Row>
     </Container>
+      
   );
 }
 
