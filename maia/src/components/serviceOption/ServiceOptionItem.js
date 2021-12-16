@@ -5,6 +5,7 @@ function ServiceDetailItem({ option }) {
   return (
     <div>
       {option.name}
+      
     </div>
   );
 }

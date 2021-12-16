@@ -1,10 +1,10 @@
 import { observer } from "mobx-react";
 import React from "react";
-import ServiceDetailItem from "./ServiceDetailItem";
+import ServiceOptionItem from "./ServiceOptionItem";
 
 function ServiceDetailList({ options }) {
   const optionList = options.map((option) => (
-    <ServiceDetailItem key={option._id} detail={option} />
+    <ServiceOptionItem key={option._id} option={option} />
   ));
 
   return <div>{optionList}</div>;

@@ -17,6 +17,7 @@ class UserStore {
     } catch (error) {
       console.log(error);
     }
+    
   };
 
   updateUser = async (updatedUser) => {
