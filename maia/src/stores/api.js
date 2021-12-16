@@ -8,7 +8,7 @@
 import axios from "axios";
 
 
-//export const baseURL = "http://192.168.8.114:8080"; // Abdullah
+export const baseURL = "http://192.168.43.3:8080"; // Abdullah
 
 // export const baseURL = "http://172.20.10.9:8080"; // Abdullah
 
@@ -19,7 +19,7 @@ import axios from "axios";
 
 // export const baseURL = "http://192.168.8.149:8080"; // Amnah
 
-export const baseURL = "http://172.20.10.3:8080"; // Ghadah
+// export const baseURL = "http://172.20.10.3:8080"; // Ghadah
 
 export const api = axios.create({
   baseURL: `${baseURL}/api`,

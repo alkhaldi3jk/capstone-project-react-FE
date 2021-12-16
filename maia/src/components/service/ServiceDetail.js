@@ -4,7 +4,7 @@ import { Redirect, useParams } from "react-router";
 import serviceStore from "../../stores/serviceStore";
 import ServiceUpdateModal from "./ServiceUpdateModal";
 import { Button } from "react-bootstrap";
-import ServiceDetailList from "../serviceDetail/ServiceDetailList";
+import ServiceDetailList from "../serviceOption/ServiceOptionList";
 import { baseURL } from "../../stores/api";
 
 function ServiceDetail() {
@@ -30,7 +30,7 @@ function ServiceDetail() {
           DELETE
         </Button>
       </p>
-      {/* <ServiceDetailList options={service.option}/> */}
+      <ServiceDetailList options={service.option}/>
     </div>
   );
 }
